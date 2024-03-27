@@ -1,0 +1,44 @@
+<?php
+include 'form.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Price Calculation</title>
+</head>
+<body>
+    <form action="form.php" method="post">
+        <p>Price: </p>
+        <input type="number" name="price">
+
+        <p>Quantity: </p>
+        <input type="number" name="quantity">
+
+        <p>Shipping Method: </p>
+        <select id="shipping" name="shipping">
+            <option value="5">Slow and Steady ($5.00)</option>
+            <option value="8.95">Put a move on it ($8.95)</option>
+            <option value="19.36">I need it yesterday! ($19.36)</option>
+        </select>
+
+        <p>Discount: </p>
+        <select id="discount" name="discount">
+            <option value="10">10%</option>
+            <option value="20">20%</option>
+            <option value="30">30%</option>
+        </select>
+
+        <p>Sales Tax: (<?php echo $tax; ?>%) </p>
+
+        <p>Number of Payments: </p>
+        <input type="number" name="payments">
+
+
+        <br><br>
+        <input type="submit" name="submit" value="calculate">
+    </form>
+</body>
+</html>
